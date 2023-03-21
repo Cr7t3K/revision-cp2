@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Ecoles</h1>
+    <ul>
+        {% for school in schools %}
+            <li><a href="/schools/show?id={{ school.id }}">{{ school.name }}</a></li>
+        {% endfor %}
+        {#-- Display all school  --#}
+    </ul>
+    <a href="/schools/add">Ajouter</a>
+{% endblock %}
